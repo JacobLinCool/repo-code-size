@@ -1,0 +1,22 @@
+{
+    "name": "repo-code-size",
+    "version": "0.1.0",
+    "description": "A chrome extension to show how many codes are in a repository, and understand what a massive thing the hard-working authors are maintaining.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "format": "prettier --write '**/*.{ts,json,md,yml}'",
+        "zip": "zip -r extension manifest.json dist"
+    },
+    "keywords": [],
+    "author": "JacobLinCool <jacoblincool@gmail.com> (https://github.com/JacobLinCool)",
+    "license": "MIT",
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^3.2.0",
+        "@types/chrome": "^0.0.188",
+        "prettier": "^2.6.2",
+        "tsup": "^6.0.1"
+    }
+}
