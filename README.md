@@ -1,5 +1,7 @@
 # Repo Code Size
 
+![Banner](./screenshots/banner.png)
+
 A chrome extension to show how many codes are in a repository, and understand what a massive thing the hard-working authors are maintaining.
 
 ## Feature
