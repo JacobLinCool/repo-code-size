@@ -8,7 +8,7 @@
         "build": "tsup",
         "dev": "tsup --watch",
         "format": "prettier --write '**/*.{ts,json,md,yml}'",
-        "zip": "zip -r extension manifest.json dist"
+        "zip": "zip -r extension manifest.json dist icons"
     },
     "keywords": [],
     "author": "JacobLinCool <jacoblincool@gmail.com> (https://github.com/JacobLinCool)",
