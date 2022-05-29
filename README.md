@@ -26,3 +26,13 @@ Hover to see the size of each type of codes.
 4. Go to [`chrome://extensions/`](chrome://extensions/), enable `Developer Mode`.
 5. Click on `Load unpacked extension...` and select the `extension` folder.
 6. Done! Try to reload a repository page and see the effect.
+
+### Access Private Repository
+
+You can let the extension to access private repositories by [generating a Personal Access Token](https://github.com/settings/tokens) and adding it to the popup.
+
+![scope](./screenshots/scope.png)
+
+![popup](./screenshots/popup.png)
+
+> The Personal Access Token in the image is not a real token.
