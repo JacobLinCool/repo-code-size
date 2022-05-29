@@ -8,11 +8,15 @@ A chrome extension to show how many codes are in a repository, and understand wh
 
 Show the size of codes in a repository besides the repository title.
 
-![total size](./screenshots/screenshot-1.png)
+![light total size](./screenshots/screenshot-3.png)
+
+![dark total size](./screenshots/screenshot-1.png)
 
 Hover to see the size of each type of codes.
 
-![details](./screenshots/screenshot-2.png)
+![light details](./screenshots/screenshot-4.png)
+
+![dark details](./screenshots/screenshot-2.png)
 
 ## Installation
 
