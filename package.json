@@ -1,11 +1,11 @@
 {
     "name": "repo-code-size",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "A chrome extension to show how many codes are in a repository, and understand what a massive thing the hard-working authors are maintaining.",
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "build": "tsup",
+        "build": "tsup && cp src/*.html dist",
         "dev": "tsup --watch",
         "format": "prettier --write '**/*.{ts,json,md,yml}'",
         "zip": "zip -r extension manifest.json dist icons"
