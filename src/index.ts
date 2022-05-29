@@ -1,7 +1,7 @@
 (async () => {
     try {
         const header = document.querySelector("#repository-container-header");
-        if (header) {
+        if (header && !header.querySelector("#repo-code-size")) {
             const path = location.pathname.split("/").filter(Boolean);
             log({ path });
 
@@ -21,6 +21,7 @@
             const parent = header.querySelector("h2");
             if (parent) {
                 const span = document.createElement("span");
+                span.id = "repo-code-size";
                 span.innerText = total;
                 span.title = details;
                 span.style.fontSize = "12px";
