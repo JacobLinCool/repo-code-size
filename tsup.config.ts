@@ -6,7 +6,8 @@ export default defineConfig((options) => ({
     target: "esnext",
     format: ["esm"],
     clean: true,
-    bundle: false,
-    minify: options.watch ? false : true,
+    bundle: true,
+    minify: false,
     dts: false,
+    splitting: false,
 }));

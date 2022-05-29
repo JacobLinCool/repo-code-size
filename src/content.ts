@@ -1,3 +1,5 @@
+import { get_token, log, size } from "./utils";
+
 (async () => {
     try {
         const header = document.querySelector("#repository-container-header");
@@ -7,6 +9,7 @@
 
             const data: Record<string, number> = await fetch(
                 `https://api.github.com/repos/${path[0]}/${path[1]}/languages`,
+                { headers: { Authorization: `token ${await get_token()}` } },
             ).then((res) => res.json());
             log({ data });
 
@@ -33,21 +36,5 @@
         }
     } catch (err) {
         log("Error Happened :(", err);
-    }
-
-    function log(...args: unknown[]) {
-        if (location.search.includes("verbose")) {
-            console.log("[repo code size]", ...args);
-        }
-    }
-
-    function size(bytes: number): string {
-        const units = ["B", "KB", "MB", "GB"];
-        let i = 0;
-        while (bytes >= 1024) {
-            bytes /= 1024;
-            i++;
-        }
-        return `${bytes.toFixed(1)} ${units[i]}`;
     }
 })();

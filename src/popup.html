@@ -7,34 +7,62 @@
     </head>
     <body>
         <a href="https://github.com/JacobLinCool/repo-code-size" target="_blank" title="Homepage">
-            <img
-                src="https://raw.githubusercontent.com/JacobLinCool/repo-code-size/main/screenshots/banner.png"
-            />
+            <div id="banner">
+                <img
+                    src="https://raw.githubusercontent.com/JacobLinCool/repo-code-size/main/screenshots/banner.png"
+                />
+            </div>
         </a>
+        <div>
+            <input id="token" type="text" placeholder="GitHub Personal Access Token" /><br />
+            <label id="label" for="token">
+                Personal Access Token is necessary to access private repositories.
+            </label>
+        </div>
         <style>
             * {
                 position: relative;
             }
             html,
-            body,
-            a {
+            body {
                 margin: 0;
                 padding: 0;
-                width: calc(640px * 1.1);
-                height: calc(320px * 1.1);
+                width: 640px;
+                height: 480px;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            #banner {
+                width: 640px;
+                height: 320px;
+                overflow: hidden;
+                display: flex;
                 justify-content: center;
                 align-items: center;
-                cursor: pointer;
             }
             img {
-                width: 640px;
+                width: 100%;
                 transition: all 0.3s ease;
             }
-            body:hover img {
-                transform: scale(1.1);
+            img:hover {
+                transform: scale(1.05);
+            }
+            #token {
+                font-size: 16px;
+                width: 360px;
+                padding: 3px 6px;
+                border: 1px solid royalblue;
+                border-radius: 4px;
+            }
+            #label {
+                display: inline-block;
+                font-size: 12px;
+                color: #666;
+                margin-top: 8px;
             }
         </style>
+        <script src="./popup.js"></script>
     </body>
 </html>
