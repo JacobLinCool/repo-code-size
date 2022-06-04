@@ -28,8 +28,10 @@ jobs:
         run: pnpm zip
 
       - name: Publish Release
-        uses: ncipollo/release-action@v1.10.0
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          artifacts: "extension.zip"
-          bodyFile: "README.md"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            extension.zip
+            LICENSE
