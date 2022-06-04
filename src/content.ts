@@ -21,7 +21,7 @@ import { get_token, log, size } from "./utils";
                 .join("\n");
             log({ details });
 
-            const parent = header.querySelector("h2");
+            const parent = header.querySelector("[itemprop='name']")?.parentElement;
             if (parent) {
                 const span = document.createElement("span");
                 span.id = "repo-code-size";
@@ -31,6 +31,8 @@ import { get_token, log, size } from "./utils";
                 span.style.color = "#666";
                 span.style.cursor = "help";
                 parent.appendChild(span);
+            } else {
+                throw new Error("Could not find parent element");
             }
             log("done");
         }
