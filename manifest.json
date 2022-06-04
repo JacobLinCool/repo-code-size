@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Repo Code Size",
     "description": "A chrome extension to show how many codes are in a repository, and understand what a massive thing the hard-working authors are maintaining.",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "homepage_url": "https://github.com/JacobLinCool/repo-code-size",
     "author": "JacobLinCool <hi@jacoblin.cool> (https://github.com/JacobLinCool)",
     "permissions": ["storage"],

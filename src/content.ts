@@ -7,9 +7,11 @@ import { get_token, log, size } from "./utils";
             const path = location.pathname.split("/").filter(Boolean);
             log({ path });
 
+            const token = await get_token();
+
             const data: Record<string, number> = await fetch(
                 `https://api.github.com/repos/${path[0]}/${path[1]}/languages`,
-                { headers: { Authorization: `token ${await get_token()}` } },
+                token && token.length >= 20 ? { headers: { Authorization: `token ${token}` } } : {},
             ).then((res) => res.json());
             log({ data });
 

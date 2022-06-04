@@ -1,6 +1,6 @@
 {
     "name": "repo-code-size",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "A chrome extension to show how many codes are in a repository, and understand what a massive thing the hard-working authors are maintaining.",
     "main": "index.js",
     "type": "module",
